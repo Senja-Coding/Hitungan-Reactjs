@@ -7,8 +7,8 @@ const EVENTS = [
   { event: "7 Hari", days: 6 },
   { event: "40 Hari", days: 39 },
   { event: "100 Hari", days: 99 },
-  { event: "Pendhak 1", days: 364 },
-  { event: "Pendhak 2", days: 729 },
+  { event: "Pendhak 1", days: 354 },
+  { event: "Pendhak 2", days: 707 },
   { event: "1000 Hari", days: 999 },
 ];
 
