@@ -5,10 +5,10 @@ const DateTable = ({ dates }) => (
     <table className="min-w-full bg-white border border-gray-200 rounded-lg">
       <thead>
         <tr>
-          <th className="py-2 px-4 border-b">Event</th>
-          <th className="py-2 px-4 border-b">Tanggal Masehi</th>
-          <th className="py-2 px-4 border-b">Tanggal Hijriyah</th>
-          <th className="py-2 px-4 border-b">Tanggal Jawa</th>
+          <th className="py-2 px-4 border-b">Areh</th>
+          <th className="py-2 px-4 border-b">Umum</th>
+          <th className="py-2 px-4 border-b">Islam</th>
+          <th className="py-2 px-4 border-b">Madhure</th>
         </tr>
       </thead>
       <tbody>
