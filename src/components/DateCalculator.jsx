@@ -28,6 +28,7 @@ const DateCalculator = () => {
       >
         Hitung
       </button>
+      <br />
       {dates.length > 0 && (
         <div className="mt-4">
           <DateTable dates={dates} />
