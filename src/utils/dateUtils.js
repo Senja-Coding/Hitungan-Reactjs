@@ -68,7 +68,7 @@ export const calculateDates = (deathDate) => {
       event,
       gregorian: format(targetDate, "dd/MMMM/yyyy"),
       hijri: hijriDate,
-      javanese: toJavaneseCalendar(targetDate),
+      javanese: toJavaneseCalendar(targetDate, "dd/MMMM/yyyy"),
     };
   });
 };
