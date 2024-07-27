@@ -13,12 +13,13 @@ const DateCalculator = () => {
 
   return (
     <div className="max-w-xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Penghitung Hari Selametan</h1>
+      <h1 className="text-2xl font-bold mb-4">Tong Bitongan Salamettan</h1>
+      <p>Se Ampon Atinghel Kaadek</p>
       <input
         type="date"
         value={deathDate}
         onChange={(e) => setDeathDate(e.target.value)}
-        className="w-full p-2 border rounded mb-4"
+        className="w-full p-2 border rounded mb-4 text-sm"
       />
       <button
         onClick={handleCalculate}
