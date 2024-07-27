@@ -15,7 +15,7 @@ const DateTable = ({ dates }) => (
         {dates.map((date, index) => (
           <tr key={index} className="text-xs">
             <td className="py-2 px-4 border-b">{date.event}</td>
-            <td className="py-2 px-4 border-b">
+            <td className="py-2 px-4 border-b text-left">
               U : {date.gregorian}
               <br />H : {date.hijri}
               <br />M : {date.javanese}

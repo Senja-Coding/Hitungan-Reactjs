@@ -33,6 +33,7 @@ const DateCalculator = () => {
           <DateTable dates={dates} />
         </div>
       )}
+      <br />
       <i>
         <p> * U : Umum, H : Hijriyah, M : Madhure</p>
       </i>
