@@ -46,7 +46,7 @@ const toJavaneseCalendar = (date) => {
   const month = JAVANESE_MONTHS[date.getMonth() % 12];
   const year = date.getFullYear();
   const dayIndex = getJavaneseDayIndex(date) + 1; // Menambahkan 1 agar sesuai dengan indeks manusia
-  return `${dayIndex}, ${month} ${year}`;
+  return `${day}, ${month} ${year}`;
 };
 
 export const calculateDates = (deathDate) => {
