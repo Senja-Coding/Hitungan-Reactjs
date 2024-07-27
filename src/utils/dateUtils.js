@@ -2,14 +2,14 @@ import { addDays, format } from "date-fns";
 import moment from "moment-hijri";
 
 const EVENTS = [
-  { event: "Meninggal", days: 0 },
-  { event: "3 Hari", days: 2 },
-  { event: "7 Hari", days: 6 },
-  { event: "40 Hari", days: 39 },
-  { event: "100 Hari", days: 99 },
-  { event: "Pendhak 1", days: 353 },
-  { event: "Pendhak 2", days: 707 },
-  { event: "1000 Hari", days: 999 },
+  { event: "Athinghel", days: 0 },
+  { event: "Lok Tellok", days: 2 },
+  { event: "Tok Pettok", days: 6 },
+  { event: "Pak Polo", days: 39 },
+  { event: "Nyatos", days: 99 },
+  { event: "Naon", days: 353 },
+  { event: "Du Taon", days: 707 },
+  { event: "Nyaebu", days: 999 },
 ];
 
 // // const JAVANESE_DAYS = [
