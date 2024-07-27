@@ -54,7 +54,7 @@ const toJavaneseCalendar = (date) => {
   const day = moment(date).format("iD");
   const month = moment(date).format("iMMM");
   // const month = JAVANESE_MONTHS[date.getMonth()];
-  const year = date.getFullYear() - 66;
+  const year = date.getFullYear() - 67;
   // const dayIndex = getJavaneseDayIndex(date) + 1; // Menambahkan 1 agar sesuai dengan indeks manusia
   return `${day}, ${month} ${year}`;
 };
