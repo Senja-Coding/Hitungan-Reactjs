@@ -21,6 +21,13 @@ const EVENTS = [
 //   "Sukra ",
 //   "Tumpak",
 // ];
+
+const convertToJavaneseYear = (gregorianYear) => {
+  // Kalender Jawa dimulai pada 1633 Masehi
+  const jawaEpoch = 1633;
+  return gregorianYear - jawaEpoch + 1;
+};
+
 const JAVANESE_MONTHS = [
   "Sura",
   "Safar",
@@ -47,7 +54,7 @@ const toJavaneseCalendar = (date) => {
   const day = moment(date).format("iD");
   const month = JAVANESE_MONTHS[date.getMonth()];
   // const month = JAVANESE_MONTHS[date.getMonth()];
-  const year = date.getFullYear() + 512;
+  const year = convertToJavaneseYear(date.getFullYear());
   // const dayIndex = getJavaneseDayIndex(date) + 1; // Menambahkan 1 agar sesuai dengan indeks manusia
   return `${day}, ${month} ${year}`;
 };
