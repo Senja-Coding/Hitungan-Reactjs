@@ -16,7 +16,11 @@ const DateTable = ({ dates }) => (
           <tr key={index} className="text-xs">
             <td className="py-2 px-4 border-b">{date.event}</td>
             <td className="py-2 px-4 border-b">
-              {date.gregorian} | {date.hijri} | {date.javanese}
+              {date.gregorian}
+              <br />
+              {date.hijri}
+              <br />
+              {date.javanese}
             </td>
             {/* <td className="py-2 px-4 border-b">{date.hijri}</td>
             <td className="py-2 px-4 border-b">{date.javanese}</td> */}
