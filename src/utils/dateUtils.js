@@ -98,9 +98,10 @@ const formatHijriDate = (date) => {
 };
 
 const formatJavaneseDate = (date) => {
-  const javaneseYear = moment(date).format("iYYYY");
+  // const javaneseYear = moment(date).format("iYYYY");
   const javaneseMonthIndex = moment(date).format("iM") - 1; // iM menghasilkan 1-based index, jadi kurangi 1
   const javaneseDay = moment(date).format("iD");
+  const javaneseYear = date.getFullYear() - 66;
 
   return `${javaneseDay} ${JAVANESE_MONTHS[javaneseMonthIndex]} ${javaneseYear} Jawa`;
 };
