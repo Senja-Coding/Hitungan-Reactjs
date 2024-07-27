@@ -12,19 +12,27 @@ const EVENTS = [
   { event: "1000 Hari", days: 999 },
 ];
 
-const JAVANESE_DAYS = ["Legi", "Pahing", "Pon", "Wage", "Kliwon"];
+const JAVANESE_DAYS = [
+  "Radite",
+  "Soma",
+  "Hanggara",
+  "Buda",
+  "Respati",
+  "Sukra ",
+  "Tumpak",
+];
 const JAVANESE_MONTHS = [
   "Sura",
-  "Sapar",
-  "Mulud",
-  "Bakda Mulud",
+  "Safar",
+  "Maulid",
+  "Bakda Maulid",
   "Jumadil Awal",
   "Jumadil Akhir",
   "Rejeb",
   "Ruwah",
   "Pasa",
   "Sawal",
-  "Dulkaidah",
+  "Sela",
   "Besar",
 ];
 
