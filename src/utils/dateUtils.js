@@ -63,8 +63,8 @@ export const calculateDates = (deathDate) => {
   return EVENTS.map(({ event, days }) => {
     const targetDate = addDays(deathDate, days);
     const hijriDate =
-      moment(targetDate).format("iD - iMMMM") +
-      moment(targetDate).format("iYYYY") +
+      moment(targetDate).format("iD - iYYYY -") +
+      moment(targetDate).format("iMMMM") +
       " H";
 
     return {
