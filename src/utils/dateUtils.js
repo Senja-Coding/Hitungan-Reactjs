@@ -12,63 +12,87 @@ const EVENTS = [
   { event: "1000 Hari", days: 999 },
 ];
 
-// const JAVANESE_DAYS = [
-//   "Radite",
-//   "Soma",
-//   "Hanggara",
-//   "Buda",
-//   "Respati",
-//   "Sukra ",
-//   "Tumpak",
+// // const JAVANESE_DAYS = [
+// //   "Radite",
+// //   "Soma",
+// //   "Hanggara",
+// //   "Buda",
+// //   "Respati",
+// //   "Sukra ",
+// //   "Tumpak",
+// // ];
+
+// // const convertToJavaneseYear = (gregorianYear) => {
+// //   // Kalender Jawa dimulai pada 1633 Masehi
+// //   const jawaEpoch = 1633;
+// //   return gregorianYear - jawaEpoch + 1000;
+// // };
+
+// const JAVANESE_MONTHS = [
+//   "Sura",
+//   "Safar",
+//   "Maulid",
+//   "Bakda Maulid",
+//   "Jumadil Awal",
+//   "Jumadil Akhir",
+//   "Rejeb",
+//   "Ruwah",
+//   "Pasa",
+//   "Sawal",
+//   "Sela",
+//   "Besar",
 // ];
 
-// const convertToJavaneseYear = (gregorianYear) => {
-//   // Kalender Jawa dimulai pada 1633 Masehi
-//   const jawaEpoch = 1633;
-//   return gregorianYear - jawaEpoch + 1000;
+// // const getJavaneseDayIndex = (date) => {
+// //   // Menghitung hari Jawa sebagai angka berdasarkan siklus 5 hari
+// //   return date.getDay() % 5;
+// // };
+
+// const toJavaneseCalendar = (date) => {
+//   // const day = JAVANESE_DAYS[getJavaneseDayIndex(date)];
+//   // const cariDate = addDays(deathDate, days);
+//   const day = moment(date).format("iD");
+//   const month = moment(date).format("iMMM");
+//   // const month = JAVANESE_MONTHS[moment(date).format("iMMM")];
+//   const year = date.getFullYear() - 67;
+//   // const dayIndex = getJavaneseDayIndex(date) + 1; // Menambahkan 1 agar sesuai dengan indeks manusia
+//   return `${day}, ${month} ${year}`;
 // };
 
-const JAVANESE_MONTHS = [
-  "Sura",
+const HIJRI_MONTHS = [
+  "Muharom",
   "Safar",
-  "Maulid",
-  "Bakda Maulid",
+  "Rabiul Awal",
+  "Rabiul Akhir",
   "Jumadil Awal",
   "Jumadil Akhir",
-  "Rejeb",
-  "Ruwah",
-  "Pasa",
-  "Sawal",
-  "Sela",
-  "Besar",
+  "Rajab",
+  "Sya’ban",
+  "Ramadhan",
+  "Syawal",
+  "Dzulqa’dah",
+  "Dzulhijjah",
 ];
 
-// const getJavaneseDayIndex = (date) => {
-//   // Menghitung hari Jawa sebagai angka berdasarkan siklus 5 hari
-//   return date.getDay() % 5;
-// };
+const formatHijriDate = (date) => {
+  const hijriYear = moment(date).format("iYYYY");
+  const hijriMonthIndex = moment(date).format("iM") - 1; // iM menghasilkan 1-based index, jadi kurangi 1
+  const hijriDay = moment(date).format("iD");
 
-const toJavaneseCalendar = (date) => {
-  // const day = JAVANESE_DAYS[getJavaneseDayIndex(date)];
-  // const cariDate = addDays(deathDate, days);
-  const day = moment(date).format("iD");
-  const month = moment(date).format("iMMM");
-  // const month = JAVANESE_MONTHS[moment(date).format("iMMM")];
-  const year = date.getFullYear() - 67;
-  // const dayIndex = getJavaneseDayIndex(date) + 1; // Menambahkan 1 agar sesuai dengan indeks manusia
-  return `${day}, ${month} ${year}`;
+  return `${hijriDay} ${HIJRI_MONTHS[hijriMonthIndex]} ${hijriYear} H`;
 };
 
 export const calculateDates = (deathDate) => {
   return EVENTS.map(({ event, days }) => {
     const targetDate = addDays(deathDate, days);
-    const hijriDate = moment(targetDate).format("iYYYY iMMMM iDD") + " H";
+    // const hijriDate = moment(targetDate).format("iYYYY iMMMM iDD") + " H";
+    const hijriDate = formatHijriDate(targetDate);
 
     return {
       event,
       gregorian: format(targetDate, "dd - MMMM - yyyy"),
       hijri: hijriDate,
-      javanese: toJavaneseCalendar(targetDate, "dd/MMMM/yyyy"),
+      // javanese: toJavaneseCalendar(targetDate, "dd/MMMM/yyyy"),
     };
   });
 };
