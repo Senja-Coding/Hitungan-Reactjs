@@ -33,7 +33,10 @@ const DateCalculator = () => {
           <DateTable dates={dates} />
         </div>
       )}
-      <p>Manabi Bede se Korang Informasikan Ekanto ghi : </p>
+      <p>
+        Manabi Bede se Korang Informasikan Ekanto ghi : @copyright :
+        Senja_Coding
+      </p>
     </div>
   );
 };
