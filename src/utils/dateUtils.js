@@ -22,11 +22,11 @@ const EVENTS = [
 //   "Tumpak",
 // ];
 
-const convertToJavaneseYear = (gregorianYear) => {
-  // Kalender Jawa dimulai pada 1633 Masehi
-  const jawaEpoch = 1633;
-  return gregorianYear - jawaEpoch + 1000;
-};
+// const convertToJavaneseYear = (gregorianYear) => {
+//   // Kalender Jawa dimulai pada 1633 Masehi
+//   const jawaEpoch = 1633;
+//   return gregorianYear - jawaEpoch + 1000;
+// };
 
 const JAVANESE_MONTHS = [
   "Sura",
@@ -54,7 +54,7 @@ const toJavaneseCalendar = (date) => {
   const day = moment(date).format("iD");
   const month = moment(date).format("iMMM");
   // const month = JAVANESE_MONTHS[date.getMonth()];
-  const year = convertToJavaneseYear(date.getFullYear());
+  const year = date.getFullYear() + 66;
   // const dayIndex = getJavaneseDayIndex(date) + 1; // Menambahkan 1 agar sesuai dengan indeks manusia
   return `${day}, ${month} ${year}`;
 };
