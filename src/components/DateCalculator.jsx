@@ -34,6 +34,7 @@ const DateCalculator = () => {
         </div>
       )}
       <br />
+      <hr />
       <i>
         <p> * U : Umum, H : Hijriyah, M : Madhure</p>
       </i>
