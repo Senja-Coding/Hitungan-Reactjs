@@ -62,7 +62,7 @@ const toJavaneseCalendar = (date) => {
 export const calculateDates = (deathDate) => {
   return EVENTS.map(({ event, days }) => {
     const targetDate = addDays(deathDate, days);
-    const hijriDate = moment(targetDate).format("DD MMMM YYYY") + " H";
+    const hijriDate = moment(targetDate).format("iDD iMMMM iYYYY") + " H";
 
     return {
       event,
