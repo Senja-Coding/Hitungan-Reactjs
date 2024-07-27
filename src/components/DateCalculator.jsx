@@ -15,6 +15,7 @@ const DateCalculator = () => {
     <div className="max-w-xl mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Tong Bitongan Salamettan</h1>
       <p>Se Ampon Atinghel Kaadek</p>
+      <br />
       <input
         type="date"
         value={deathDate}
