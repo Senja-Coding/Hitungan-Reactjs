@@ -60,18 +60,18 @@ const EVENTS = [
 // };
 
 const JAVANESE_MONTHS = [
-  "Sura",
-  "Safar",
-  "Maulid",
-  "Bakda Maulid",
-  "Jumadil Awal",
-  "Jumadil Akhir",
-  "Rejeb",
-  "Ruwah",
-  "Pasa",
-  "Sawal",
-  "Sela",
-  "Besar",
+  "Sora",
+  "Sappar",
+  "Molod",
+  "Rasol",
+  "Dilawel",
+  "Dilaher",
+  "Rejjeb",
+  "Rebbeh",
+  "Pasah",
+  "Sabel",
+  "Takepek'",
+  "Reaje",
 ];
 
 const HIJRI_MONTHS = [
@@ -98,12 +98,12 @@ const formatHijriDate = (date) => {
 };
 
 const formatJavaneseDate = (date) => {
-  // const javaneseYear = moment(date).format("iYYYY");
+  const javaneseYear = moment(date).format("iYYYY");
   const javaneseMonthIndex = moment(date).format("iM") - 1; // iM menghasilkan 1-based index, jadi kurangi 1
   const javaneseDay = moment(date).format("iD");
-  const javaneseYear = date.getFullYear() - 66;
+  // const javaneseYear = date.getFullYear() - 66;
 
-  return `${javaneseDay} ${JAVANESE_MONTHS[javaneseMonthIndex]} ${javaneseYear} Jawa`;
+  return `${javaneseDay} ${JAVANESE_MONTHS[javaneseMonthIndex]} ${javaneseYear} Madhure`;
 };
 
 export const calculateDates = (deathDate) => {
