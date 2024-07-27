@@ -21,20 +21,20 @@ const EVENTS = [
 //   "Sukra ",
 //   "Tumpak",
 // ];
-// const JAVANESE_MONTHS = [
-//   "Sura",
-//   "Safar",
-//   "Maulid",
-//   "Bakda Maulid",
-//   "Jumadil Awal",
-//   "Jumadil Akhir",
-//   "Rejeb",
-//   "Ruwah",
-//   "Pasa",
-//   "Sawal",
-//   "Sela",
-//   "Besar",
-// ];
+const JAVANESE_MONTHS = [
+  "Sura",
+  "Safar",
+  "Maulid",
+  "Bakda Maulid",
+  "Jumadil Awal",
+  "Jumadil Akhir",
+  "Rejeb",
+  "Ruwah",
+  "Pasa",
+  "Sawal",
+  "Sela",
+  "Besar",
+];
 
 // const getJavaneseDayIndex = (date) => {
 //   // Menghitung hari Jawa sebagai angka berdasarkan siklus 5 hari
@@ -45,9 +45,9 @@ const toJavaneseCalendar = (date) => {
   // const day = JAVANESE_DAYS[getJavaneseDayIndex(date)];
   // const cariDate = addDays(deathDate, days);
   const day = moment(date).format("iD");
-  const month = moment(date).format("iMMM");
+  const month = JAVANESE_MONTHS[date.getMonth()];
   // const month = JAVANESE_MONTHS[date.getMonth()];
-  const year = date.getFullYear();
+  const year = date.getFullYear() + 512;
   // const dayIndex = getJavaneseDayIndex(date) + 1; // Menambahkan 1 agar sesuai dengan indeks manusia
   return `${day}, ${month} ${year}`;
 };
