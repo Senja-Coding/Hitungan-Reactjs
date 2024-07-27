@@ -3,13 +3,13 @@ import moment from "moment-hijri";
 
 const EVENTS = [
   { event: "Meninggal", days: 0 },
-  { event: "3 Hari", days: 3 },
-  { event: "7 Hari", days: 7 },
-  { event: "40 Hari", days: 40 },
-  { event: "100 Hari", days: 100 },
-  { event: "Pendhak 1", days: 365 },
-  { event: "Pendhak 2", days: 730 },
-  { event: "1000 Hari", days: 1000 },
+  { event: "3 Hari", days: 2 },
+  { event: "7 Hari", days: 6 },
+  { event: "40 Hari", days: 39 },
+  { event: "100 Hari", days: 99 },
+  { event: "Pendhak 1", days: 364 },
+  { event: "Pendhak 2", days: 729 },
+  { event: "1000 Hari", days: 999 },
 ];
 
 const JAVANESE_DAYS = ["Legi", "Pahing", "Pon", "Wage", "Kliwon"];
