@@ -17,10 +17,8 @@ const DateTable = ({ dates }) => (
             <td className="py-2 px-4 border-b">{date.event}</td>
             <td className="py-2 px-4 border-b text-left">
               U : {date.gregorian}
-              <hr />
-              <br />H : {date.hijri}
-              <hr />
-              <br />M : {date.javanese}
+              <hr />H : {date.hijri}
+              <hr />M : {date.javanese}
             </td>
             {/* <td className="py-2 px-4 border-b">{date.hijri}</td>
             <td className="py-2 px-4 border-b">{date.javanese}</td> */}
