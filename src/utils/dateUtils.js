@@ -25,7 +25,7 @@ const EVENTS = [
 const convertToJavaneseYear = (gregorianYear) => {
   // Kalender Jawa dimulai pada 1633 Masehi
   const jawaEpoch = 1633;
-  return gregorianYear - jawaEpoch + 325;
+  return gregorianYear - jawaEpoch + 1000;
 };
 
 const JAVANESE_MONTHS = [
