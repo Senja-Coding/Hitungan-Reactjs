@@ -59,6 +59,21 @@ const EVENTS = [
 //   return `${day}, ${month} ${year}`;
 // };
 
+const JAVANESE_MONTHS = [
+  "Sura",
+  "Safar",
+  "Maulid",
+  "Bakda Maulid",
+  "Jumadil Awal",
+  "Jumadil Akhir",
+  "Rejeb",
+  "Ruwah",
+  "Pasa",
+  "Sawal",
+  "Sela",
+  "Besar",
+];
+
 const HIJRI_MONTHS = [
   "Muharom",
   "Safar",
@@ -79,7 +94,7 @@ const formatHijriDate = (date) => {
   const hijriMonthIndex = moment(date).format("iM") - 1; // iM menghasilkan 1-based index, jadi kurangi 1
   const hijriDay = moment(date).format("iD");
 
-  return `${hijriDay} ${HIJRI_MONTHS[hijriMonthIndex]} ${hijriYear} H`;
+  return `${hijriDay} ${JAVANESE_MONTHS[hijriMonthIndex]} ${hijriYear} H`;
 };
 
 export const calculateDates = (deathDate) => {
