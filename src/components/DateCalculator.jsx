@@ -14,7 +14,7 @@ const DateCalculator = () => {
   return (
     <div className="max-w-xl mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Tong Bitongan Salamettan</h1>
-      <p>Se Ampon Atinghel Kaadek</p>
+      <p>Se Ampon Atingghel Kaadek</p>
       <br />
       <input
         type="date"
@@ -33,6 +33,7 @@ const DateCalculator = () => {
           <DateTable dates={dates} />
         </div>
       )}
+      <p>Manabi Bede se Korang Informasikan Ekanto ghi : </p>
     </div>
   );
 };
