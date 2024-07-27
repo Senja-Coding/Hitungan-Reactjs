@@ -12,34 +12,34 @@ const EVENTS = [
   { event: "1000 Hari", days: 999 },
 ];
 
-const JAVANESE_DAYS = [
-  "Radite",
-  "Soma",
-  "Hanggara",
-  "Buda",
-  "Respati",
-  "Sukra ",
-  "Tumpak",
-];
-const JAVANESE_MONTHS = [
-  "Sura",
-  "Safar",
-  "Maulid",
-  "Bakda Maulid",
-  "Jumadil Awal",
-  "Jumadil Akhir",
-  "Rejeb",
-  "Ruwah",
-  "Pasa",
-  "Sawal",
-  "Sela",
-  "Besar",
-];
+// const JAVANESE_DAYS = [
+//   "Radite",
+//   "Soma",
+//   "Hanggara",
+//   "Buda",
+//   "Respati",
+//   "Sukra ",
+//   "Tumpak",
+// ];
+// const JAVANESE_MONTHS = [
+//   "Sura",
+//   "Safar",
+//   "Maulid",
+//   "Bakda Maulid",
+//   "Jumadil Awal",
+//   "Jumadil Akhir",
+//   "Rejeb",
+//   "Ruwah",
+//   "Pasa",
+//   "Sawal",
+//   "Sela",
+//   "Besar",
+// ];
 
-const getJavaneseDayIndex = (date) => {
-  // Menghitung hari Jawa sebagai angka berdasarkan siklus 5 hari
-  return date.getDay() % 5;
-};
+// const getJavaneseDayIndex = (date) => {
+//   // Menghitung hari Jawa sebagai angka berdasarkan siklus 5 hari
+//   return date.getDay() % 5;
+// };
 
 const toJavaneseCalendar = (date) => {
   // const day = JAVANESE_DAYS[getJavaneseDayIndex(date)];
