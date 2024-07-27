@@ -94,7 +94,7 @@ const formatHijriDate = (date) => {
   const hijriMonthIndex = moment(date).format("iM") - 1; // iM menghasilkan 1-based index, jadi kurangi 1
   const hijriDay = moment(date).format("iD");
 
-  return `${hijriDay} ${HIJRI_MONTHS[hijriMonthIndex]} ${hijriYear} H`;
+  return `${hijriDay} ${HIJRI_MONTHS[hijriMonthIndex]} ${hijriYear}`;
 };
 
 const formatJavaneseDate = (date) => {
@@ -103,7 +103,7 @@ const formatJavaneseDate = (date) => {
   const javaneseDay = moment(date).format("iD");
   // const javaneseYear = date.getFullYear() - 66;
 
-  return `${javaneseDay} ${JAVANESE_MONTHS[javaneseMonthIndex]} ${javaneseYear} Madhure`;
+  return `${javaneseDay} ${JAVANESE_MONTHS[javaneseMonthIndex]} ${javaneseYear}`;
 };
 
 export const calculateDates = (deathDate) => {
@@ -115,7 +115,7 @@ export const calculateDates = (deathDate) => {
 
     return {
       event,
-      gregorian: format(targetDate, "dd - MMMM - yyyy"),
+      gregorian: format(targetDate, "dd MMMM yyyy"),
       hijri: hijriDate,
       javanese: javaneseDate,
     };
