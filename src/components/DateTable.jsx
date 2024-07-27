@@ -8,7 +8,7 @@ const DateTable = ({ dates }) => (
           <th className="py-2 px-4 border-b">Event</th>
           <th className="py-2 px-4 border-b">Tanggal Masehi</th>
           <th className="py-2 px-4 border-b">Tanggal Hijriyah</th>
-          <th className="py-2 px-4 border-b">Tanggal Jawa</th>
+          {/* <th className="py-2 px-4 border-b">Tanggal Jawa</th> */}
         </tr>
       </thead>
       <tbody>
@@ -17,7 +17,7 @@ const DateTable = ({ dates }) => (
             <td className="py-2 px-4 border-b">{date.event}</td>
             <td className="py-2 px-4 border-b">{date.gregorian}</td>
             <td className="py-2 px-4 border-b">{date.hijri}</td>
-            <td className="py-2 px-4 border-b">{date.javanese}</td>
+            {/* <td className="py-2 px-4 border-b">{date.javanese}</td> */}
           </tr>
         ))}
       </tbody>
