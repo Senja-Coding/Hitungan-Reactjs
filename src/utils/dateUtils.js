@@ -53,7 +53,7 @@ const toJavaneseCalendar = (date) => {
   // const cariDate = addDays(deathDate, days);
   const day = moment(date).format("iD");
   // const month = moment(date).format("iMMM");
-  const month = JAVANESE_MONTHS[date.getMonth()];
+  const month = JAVANESE_MONTHS[moment(date).format("iMMM")];
   const year = date.getFullYear() - 67;
   // const dayIndex = getJavaneseDayIndex(date) + 1; // Menambahkan 1 agar sesuai dengan indeks manusia
   return `${day}, ${month} ${year}`;
